@@ -5,10 +5,11 @@ import { hydrate } from 'react-dom';
 import { WebSocketProvider } from "./websocket-provider"; // Import the WebSocketProvider
 import reactLogo from "./react.svg";
 
-
+const websocketurl = process.env.RAZZLE_WEBSOCKET_URL;
+console.log(process.env.RAZZLE_WEBSOCKET_URL);
 hydrate(
   <WebSocketProvider
-    url="ws://localhost:5000"
+    url={websocketurl}
     icon={reactLogo}
     brand=''
   >
